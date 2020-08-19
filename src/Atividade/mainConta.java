@@ -13,9 +13,9 @@ public class mainConta {
         Scanner leitor = new Scanner (System.in);
         
         
-       //try {
+            try {
             System.out.println(" ");
-            System.out.println(" *** Dados da Conta *** ");
+            System.out.println(" *** Preenchendo Dados da Conta *** ");
             System.out.println(" ");
             
             System.out.println("Número: ");
@@ -26,10 +26,19 @@ public class mainConta {
             double saldo = leitor.nextDouble();
             System.out.println("Limite de Saque: ");
             double limiteSaque = leitor.nextDouble();
-            
             Conta teste = new Conta (numero, nome, saldo, limiteSaque);
-        
+            teste.imprimir();
             
-        //}
+            System.out.println(" ");
+            System.out.println("Valor a ser Sacado: ");
+            double valor_saque = leitor.nextDouble();
+            teste.sacar(valor_saque);
+            
+            
+            }catch (ExcecaoPersonalizada excecao){
+                System.out.println(excecao.getMessage());
+            }
+            
+            
     }
 }
