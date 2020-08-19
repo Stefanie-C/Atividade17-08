@@ -33,7 +33,7 @@ public class Conta {
              throw new ExcecaoPersonalizada ("NÃO FOI POSSÍVEL REALIZAR O SAQUE."
                     + "A CONTA NÃO POSSUI SALDO DISPONÍVEL.");
         }else{
-            System.out.println("ERRO NO PROGRAMA!");
+           
         }
         
         saldo -= valor_saque;
